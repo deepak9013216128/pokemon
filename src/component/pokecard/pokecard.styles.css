@@ -1,0 +1,100 @@
+.poke-card {
+  background-color: transparent;
+  width: 170px;
+  height: 235px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #aaaaaa;
+  perspective: 1000px;
+}
+.poke-card-front {
+  color: black;
+  width: 170px;
+  height: 235px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.poke-card-back {
+  width: 170px;
+  height: 235px;
+  background-color: #2f2f2f;
+  border-radius: 10px;
+  color: lightgray;
+}
+.hidden {
+  display: none;
+}
+.pokemon-name {
+	font-family: cursive;
+	margin: 0;
+}
+.pokeball-img {
+	width: 70px;
+	height: 70px;
+}
+.pokemon-img {
+  width: 140px;
+  height: 140px;
+  background-color: white;
+  border-radius: 10px;
+}
+.pokemon-data {
+	margin: 0;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/*.flip-card {
+  background-color: transparent;
+  width: 170px;
+  height: 235px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #aaaaaa;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect 
+} 
+*/
+
+/* This container is needed to position the front and back side */
+/*.flip-card-inner {
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+*/
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/*.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+	color: lightgray;
+	cursor: pointer;
+}*/
+
+/* Position the front and back side */
+/*.flip-card-front, .flip-card-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden; /* Safari 
+  backface-visibility: hidden;
+
+}*/
+
+/* Style the front side (fallback if image is missing) */
+/*.flip-card-front {
+  color: black;
+  width: 170px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+/* Style the back side */
+/*.flip-card-back {
+	width: 170px;
+  height: 235px;
+  background-color: #2f2f2f;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+*/

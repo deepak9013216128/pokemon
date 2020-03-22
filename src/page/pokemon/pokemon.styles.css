@@ -1,0 +1,11 @@
+.player {
+	display: flex;
+	justify-content: space-between;
+}
+.pokemon {
+	/*position: absolute;*/
+	/*background-color: #e1e1e1;*/
+}
+.player1 {
+	border-right: 0.04px solid black;
+}

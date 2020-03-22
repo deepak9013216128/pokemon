@@ -1,0 +1,9 @@
+.pokedex {
+	display: flex;
+	flex-direction: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.title {
+	position: relative;
+}
