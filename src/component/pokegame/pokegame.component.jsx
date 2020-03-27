@@ -44,7 +44,7 @@ class Pokegame extends React.Component {
 							id='totalPokemon' 
 							step='2' 
 							min='5' 
-							max='30' 
+							max='21' 
 							type='number' 
 							placeholder='5' 
 							onChange={this.handleFormChange}
@@ -58,11 +58,11 @@ class Pokegame extends React.Component {
 			return (
 				<div className='pokegame'>
 					<div className={humanWon >computerWon ? 'winner':'looser'}>
-						<h1>YOU Won: {humanWon}</h1>
+						<h1>You Won: {humanWon}</h1>
 						<hr />
 					</div>
 					<div className={humanWon <computerWon ? 'winner':'looser'}>
-						<h1>COMPUTER Won: {computerWon}</h1>
+						<h1>Computer Won: {computerWon}</h1>
 						<hr />
 					</div>
 				</div>

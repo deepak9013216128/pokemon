@@ -29,18 +29,17 @@ class Pokecard extends React.Component {
 			<div className="poke-card"
 				onClick={this.handleClick}
 			>
-			  <div className="poke-card-inner">
-			    <div className={isActive? 'hidden' :"poke-card-front"}>
-			      <img className='pokeball-img' src="https://i.pinimg.com/originals/c9/29/2e/c9292ec4cc6b156dfe21cfe6825ce8b5.jpg" alt="pokeball" />
-			    </div>
-			    <div className={isActive?"poke-card-back":'hidden'}>
-			      <h2 className='pokemon-name'>{name}</h2>
-				  <img className='pokemon-img' src={imgSrc} alt={name} />
-				  <hr />
-				  <h3 className='pokemon-data'>Type: {type}</h3>
-				  <h3 className='pokemon-data'>Exp: {base_experience}</h3>
-			    </div>
-			  </div>
+				<div className="poke-card-inner">
+				    <div className={isActive? 'hidden' :"poke-card-front"}>
+				        <img className='pokeball-img' src="https://i.pinimg.com/originals/c9/29/2e/c9292ec4cc6b156dfe21cfe6825ce8b5.jpg" alt="pokeball" />
+				    </div>
+				    <div className={isActive?"poke-card-back":'hidden'}>
+				      <h1 className='pokemon-name'>{`${name[0].toUpperCase()}${name.slice(1)}`}</h1>
+					    <img className='pokemon-img' src={imgSrc} alt={name} />
+					    <h3 className='pokemon-data'>Type: {type}</h3>
+					    <h4 className='pokemon-data'>Exp: {base_experience}</h4>
+				    </div>
+				</div>
 			</div>
 			
 		)
