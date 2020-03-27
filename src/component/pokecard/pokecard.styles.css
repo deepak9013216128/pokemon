@@ -17,12 +17,20 @@
   justify-content: center;
   align-items: center;
 }
+.poke-card-front:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
 .poke-card-back {
   width: 170px;
   height: 235px;
   background-color: #2f2f2f;
   border-radius: 10px;
   color: lightgray;
+}
+.poke-card-back:hover {
+  background-color: #3f3f3f;
+  color: white;
 }
 .hidden {
   display: none;

@@ -2,5 +2,40 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+}
 
+.winner {
+	color: rgba(0,256,0,0.4)
+}
+
+.looser {
+	color: rgba(256,0,0,0.3)
+}
+
+.poke-form {
+	font-size: 1.5rem;
+}
+.poke-label {
+	color: orange;
+	display: block;
+}
+.poke-input {
+	border: none;
+	outline: none;
+	width: 5em;
+	height: 2em;
+	border-radius: 0.5em;
+	text-align: center;
+}
+.poke-button {
+	border: none;
+	width: auto;
+	border-radius: 0.5em;
+	height: 2em;
+	outline: none;
+	background-color: rgba(0,0,256,0.2);
+	/*box-shadow: 2px 5px ease;*/
+}
+.poke-button:hover {
+	background-color: rgba(0,0,256,0.5);
 }

@@ -6,43 +6,20 @@ import Pokecard from '../pokecard/pokecard.component';
 
 class Pokedex extends React.Component {
 	state={
-		picked:[0,1,2,3,4],
+		picked:Array.from(Array(this.props.totalPokemon/2).keys()),
 		pick: -1
 	}
-	componentDidMount(){
-
-		// const {pokemon} = this.props.pokemon;
-		// console.log(this.props)
-		// let idx= -1;
-		// if(this.props.player==='computer' && this.props.isClick){
-		// 	idx = Math.floor(Math.random()*this.state.picked.length)
-		// 	console.log("pick",idx)
-		// 	// console.log(this.state,idx)
-		// 	if(this.state.picked.length >0 && pokemon.length!==5){
-		// 		this.setState({
-		// 			picked:this.state.picked.filter(e=> e!==this.state.picked[idx]),
-		// 			pick: idx
-		// 		})
-		// 		// console.log(this.state.picked.filter(e=> e!==this.state.picked[pick]))
-		// 	}
-		// }
-		
-	}
-
-	render(){
-		// console.log(this.props)
-		if(this.props.reset){
+	componentDidUpdate(){
+		const {pokemon,reset,player,totalPokemon,isClick} = this.props;
+		if(reset){
 			this.setState({
-				picked:[0,1,2,3,4],
+				picked:Array.from(Array(totalPokemon/2).keys()),
 				pick: -1
 			},()=>{
 				this.props.handleReset()
-				// console.log(this.state)
 			})
 		}
-		const {pokemon} = this.props.pokemon;
-		if(this.props.player==='computer' && this.state.picked.length >0 && pokemon.length===5 && this.props.isClick){
-
+		if(player==='computer' && this.state.picked.length >0 && pokemon.length===totalPokemon/2 && isClick){
 			setTimeout(()=>{
 				let idx= -1;
 				if(this.props.player==='computer' && this.props.isClick){
@@ -58,16 +35,19 @@ class Pokedex extends React.Component {
 				}
 			},10)
 		}
-
+	}
+	render(){
+		const {pokemon,player,pick,handleCompare} = this.props;
 		return (
 			<div className='pokedex'>
 				{
 					pokemon.map( (p,idx) => 
 						<Pokecard 
-							key={p.id} {...p} 
-							player={this.props.player}
-							isActive={idx===this.props.pick} 
-							handleCompare={this.props.handleCompare}
+							key={p.key} 
+							{...p} 
+							player={player}
+							isActive={idx===pick} 
+							handleCompare={handleCompare}
 						/>
 					)
 				}
